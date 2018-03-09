@@ -1,0 +1,7 @@
+#タッチパッド無効化
+xinput set-int-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 8 0
+#透過
+compton --config ~/.config/compton/compton.conf -b
+#壁紙
+feh --image-bg black --bg-max '/home/nagura/.wallpaper/pokemon/e8e28ddf.jpg'
+

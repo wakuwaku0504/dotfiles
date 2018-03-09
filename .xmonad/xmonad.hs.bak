@@ -1,0 +1,21 @@
+import XMonad
+import XMonad.Hooks.ManageDocks
+
+main :: IO()
+main = do
+  xmonad $ defaultConfig
+    {terminal  = myTerminal 
+    ,startupHook = myStartupHook
+    ,layoutHook=avoidStruts $ layoutHook defaultConfig
+    ,manageHook=manageHook defaultConfig <+> manageDocks
+    }
+
+myTerminal  = "urxvt"
+
+myStartupHook = do
+        spawn "xinput set-int-prop 'SynPS/2 Synaptics TouchPad' 'Device Enabled' 8 0"
+        spawn "compton --config ~/.config/compton/compton.conf -b"
+        spawn "source ~/.i3/wallpaper.sh"
+        spawn "source ~/.conky_run.sh"
+      
+  

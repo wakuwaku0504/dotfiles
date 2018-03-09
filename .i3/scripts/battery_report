@@ -1,0 +1,61 @@
+#! /bin/sh
+
+#しきい値を下回ったときにこれが0なら通知をして1になる
+#しきい値より回復したら0になる
+#84%になったら知らせる
+flag30=0
+flag20=0
+flag10=0
+flagf_0=0
+flagf_1=0
+full=84
+while true; do
+    bat0=`upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage` 
+    bat0=`echo $bat0 | sed -e "s/percentage: //" -e "s/%//"`
+    bat1=`upower -i /org/freedesktop/UPower/devices/battery_BAT1 | grep percentage`
+    bat1=`echo $bat1 | sed -e "s/percentage: //" -e "s/%//"`
+    bat=`expr $bat0 + $bat1`
+    les30=`expr $bat \<= 60` #残りのバッテリーが合わせて60%以下つまり全体で30%以下のとき1    
+    les20=`expr $bat \<= 40` #残りのバッテリーが合わせて40%以下つまり全体で20%以下のとき1    
+    les10=`expr $bat \<= 20` #残りのバッテリーが合わせて20%以下つまり全体で10%以下のとき1    
+    full0=`expr $bat0 \>= $full` #残りのバッテリーが合わせて
+    full1=`expr $bat1 \>= $full` #
+    #30%
+    if [ $les30 -eq 1 -a $flag30 -eq 0 ];then
+        notify-send -t 10000 -u critical 'Battery' '30%'
+        flag30=1
+    elif [ $les30 -eq 0 -a $flag30 -eq 1 ];then
+        flag30=0
+    fi
+    #20%
+    if [ $les20 -eq 1 -a $flag20 -eq 0 ];then
+        notify-send -t 10000 -u critical 'Battery' '20%'
+        flag20=1
+    elif [ $les20 -eq 0 -a $flag20 -eq 1 ];then
+        flag20=0
+    fi
+    #10%
+    if [ $les10 -eq 1 -a $flag10 -eq 0 ];then
+        notify-send -t 10000 -u critical 'Battery' '10%'
+        flag10=1
+    elif [ $les10 -eq 0 -a $flag10 -eq 1 ];then
+        flag10=0
+    fi
+    #full0
+    if [ $full0 -eq 1 -a $flagf_0 -eq 0 ];then
+        notify-send -t 10000 -u critical 'Battery' 'battery 1 is full!'
+        flagf_0=1
+    elif [ $full0 -eq 0 -a $flagf_0 -eq 1 ];then
+        flagf_0=0
+    fi
+    #full1
+    if [ $full1 -eq 1 -a $flagf_1 -eq 0 ];then
+        notify-send -t 10000 -u critical 'Battery' 'battery 2 is full!'
+        flagf_1=1
+    elif [ $full1 -eq 0 -a $flagf_1 -eq 1 ];then
+        flagf_1=0
+    fi
+
+    sleep 1m 
+done
+
