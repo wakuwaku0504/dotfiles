@@ -1,0 +1,103 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+hook_add = '''
+        nnoremap <silent> <Space>db :<C-u>Denite -mode=normal buffer<CR> 
+        nnoremap <silent> <Space>dy :<C-u>Denite -mode=normal neoyank<CR>
+        nnoremap <silent> <Space>df :<C-u>Denite -mode=normal file_rec<CR>
+        nnoremap <silent> <Space>dm :<C-u>Denite -mode=normal file_mru<CR>
+        nnoremap <silent> <Space>dg :<C-u>Denite -mode=normal grep<CR>
+        nnoremap <silent> <Space>dd :<C-u>Denite -mode=normal buffer file_mru<CR>
+'''
+hook_post_source = '''
+        call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+        call denite#custom#var('grep', 'command', ['ag'])
+        call denite#custom#var('grep', 'recursive_opts', [])
+        call denite#custom#var('grep', 'pattern_opt', [])
+        call denite#custom#var('grep', 'default_opts', ['--follow', '--no-group', '--no-color'])
+'''
+ 
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'Shougo/neoyank.vim'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'scrooloose/nerdcommenter'
+hook_add = 'let NERDSpaceDelims = 1'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+		nnoremap <silent> <C-n> :NERDTreeToggle<CR>
+'''
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+hook_add = '''
+		let g:EasyMotion_do_mapping=0
+		nmap s <plug>(easymotion-overwin-f2)
+		let g:EasyMotion_smartcase=1
+'''
+
+[[plugins]]
+repo = 'jmcantrell/vim-virtualenv'
+
+[[plugins]]
+repo = 'fuenor/im_control.vim'
+hook_add = '''
+        let IM_CtrlMode = 6
+        inoremap <silent> <C-j> <C-r>=IMState('FixMode')<CR>
+        set timeout timeoutlen=3000 ttimeoutlen=100
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+		let g:airline_theme = 'luna'
+		let g:airline_fonts = 2
+		let g:airline#extensions#tabline#enabled = 1
+		let g:airline#extensions#virtualenv#enabled = 1
+        let g:airline#extensions#tabline#buffer_idx_mode = 0
+        nnoremap <C-h> <Plug>AirlineSelectPrevTab
+        nnoremap <C-l> <Plug>AirlineSelectNextTab
+'''
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+hook_add = '''
+        let g:quicrun_config = {
+            \ '_' : {
+                \ 'runner' : 'vimproc',
+                \ 'runner/vimproc/updatetime' : 40,
+                \ 'outputter' : 'error',
+                \ 'outputter/error/success' : 'buffer',
+                \ 'outputter/error/error' : 'quickfix',
+                \ 'outputter/buffer/split' : ':botright 8sp'
+            \}
+        \}
+'''
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+hook_add = '''
+        set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ \[ENC=%{&fileencoding}]%P 
+'''

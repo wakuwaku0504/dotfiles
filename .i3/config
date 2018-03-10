@@ -203,7 +203,7 @@ exec --no-startup-id xset -b
 ##exec xinput set-int-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 8 0 
 ##���߂�����
 # exec --no-startup-id xcompmgr -c &
-exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
+# exec --no-startup-id compton --config ~/.config/compton/compton.conf -b
 #exec --no-startup-id setxkbmap -option ctrl:nocaps 
 #exec ~/.i3/scripts/wallpaper.sh 
 exec --no-startup-id feh  --image-bg black --bg-max '/home/nagura/.wallpaper/wallpaper' 
@@ -211,8 +211,8 @@ exec --no-startup-id ~/.conky_run.sh
 exec  ~/.i3/scripts/battery_report
 #exec --no-startup-id battery-monitor
 #####i3-gaps####
-gaps inner 15
-gaps outer 10   
+gaps inner 0
+gaps outer 0   
 
 client.focused #859900 #859900 #fdf6e3 #6c71c4
 client.focused_inactive #073642 #073642 #eee8d5 #6c71c4

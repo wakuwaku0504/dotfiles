@@ -1,0 +1,36 @@
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+depends = ['neosnippet-snippets']
+on_i = 1
+on_ft = ['snippet']
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+if = 'has("nvim")'
+on_i = 1
+hook_source = '''
+        let g:deoplete#enable_at_startup = 1
+        let g:deoplete#enable_ignore_case = 1
+'''
+hook_post_source = '''
+        let g:deoplete#omni_patterns = {}
+        autocmd InsertLeave * if pumvisible() == 0 | pclose | endif
+'''
+
+[[plugins]]
+repo = 'zchee/deoplete-jedi'
+on_i = 1
+on_ft = 'python'
+
+[[plugins]]
+repo = 'Vimjas/vim-python-pep8-indent'
+on_ft = 'python'
+
+
+[[plugins]]
+repo = 'sudar/vim-arduino-syntax'
+on_ft = 'arduino'
+
+[[plugins]]
+repo = 'kana/vim-filetype-haskell'
+on_ft = 'haskell'

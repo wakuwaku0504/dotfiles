@@ -1,0 +1,2 @@
+100
+['Shougo/dein.vim', 'Shougo/denite.nvim', 'Shougo/deoplete.nvim', 'Shougo/neomru.vim', 'Shougo/neosnippet-snippets', 'Shougo/neosnippet.vim', 'Shougo/neoyank.vim', 'Shougo/vimproc.vim', 'Vimjas/vim-python-pep8-indent', 'airblade/vim-gitgutter', 'easymotion/vim-easymotion', 'fuenor/im_control.vim', 'jmcantrell/vim-virtualenv', 'kana/vim-filetype-haskell', 'scrooloose/nerdcommenter', 'scrooloose/nerdtree', 'sudar/vim-arduino-syntax', 'thinca/vim-quickrun', 'tpope/vim-fugitive', 'vim-airline/vim-airline', 'vim-airline/vim-airline-themes', 'zchee/deoplete-jedi']

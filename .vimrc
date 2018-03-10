@@ -12,6 +12,7 @@ set encoding=utf-8
 set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
 scriptencoding utf-8
 
+
 "syntax on"
 syntax on
 " leader
@@ -91,6 +92,8 @@ nnoremap <silent> O :<C-u>call append(expand('.'), '')<Cr>j
 "buffer
 nnoremap <silent> <Space>l :bn<CR>
 nnoremap <silent> <Space>h :bp<CR>
+"terminal mode
+tnoremap <silent> <C-j><C-j> <C-\><C-n>
 "プラグイン
 "dein Scripts-----------------------------
 if &compatible
