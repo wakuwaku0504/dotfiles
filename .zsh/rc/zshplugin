@@ -1,0 +1,11 @@
+#plugin読み込み
+
+#syntax highlight
+if [ -f $ZDOTDIR/zplugin/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source $ZDOTDIR/zplugin/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi 
+
+#visualmode
+if [ -f $ZDOTDIR/zplugin/zsh-vimode-visual/zsh-vimode-visual.zsh ]; then
+    source $ZDOTDIR/zplugin/zsh-vimode-visual/zsh-vimode-visual.zsh
+fi

@@ -18,7 +18,7 @@ font pango:sazanami 8
 floating_modifier Mod1
 
 # start a terminal
-bindsym Mod1+Return exec urxvt
+bindsym Mod1+Return exec ~/.i3/scripts/run_urxvt.sh
 #bindsym Mod1+Return exec terminator
 
 # kill focused window
@@ -209,6 +209,7 @@ exec --no-startup-id xset -b
 exec --no-startup-id feh  --image-bg black --bg-max '/home/nagura/.wallpaper/wallpaper' 
 exec --no-startup-id ~/.conky_run.sh
 exec  ~/.i3/scripts/battery_report
+# exec --no-startup-id urxvtd -o -f
 #exec --no-startup-id battery-monitor
 #####i3-gaps####
 gaps inner 0

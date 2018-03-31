@@ -1,0 +1,26 @@
+#zsh„Åß„ÅÆÈñ¢Êï∞
+function ranger-cd {
+    tempfile="$(mktemp -t tmp.XXXXXX)"
+    /usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
+    test -f "$tempfile" &&
+    if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
+        cd -- "$(cat "$tempfile")"
+    fi
+    rm -f -- "$tempfile"
+}
+
+#zshÇ…Ç®ÇØÇÈÉvÉçÉìÉvÉg
+function zle-line-init zle-keymap-select {
+    case $KEYMAP in
+        vicmd)
+        PROMPT=$PROMPT_NORMAL
+        ;;
+        main|viins)
+        PROMPT=$PROMPT_INSERT
+        ;;
+        vivis)
+        PROMPT=$PROMPT_VISUAL
+        ;;
+    esac
+    zle reset-prompt
+}

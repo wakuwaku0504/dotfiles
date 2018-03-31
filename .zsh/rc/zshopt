@@ -1,0 +1,63 @@
+#ディレクトリ名の補完で末尾に/を
+setopt auto_param_slash
+#カッコ自動補完
+setopt auto_param_keys
+#タブで自動に候補切り替え
+setopt auto_menu
+# cd を省略
+setopt auto_cd 
+# コマンドを訂正して下さる
+setopt correct 
+# ファイル名も訂正して下さる
+setopt correct_all
+# 語の途中でも補完
+setopt complete_in_word
+# C-dでログアウトしない
+setopt IGNOREEOF
+# エラーの際のビープ音を鳴らさない
+setopt no_beep 
+
+# # 親プロセスが死んでも子プロセスが死なない
+# setopt nohup
+
+# # 複数のタームで実行したコマンドのヒストリを共有化する
+# setopt share_history
+# # 直前と同じコマンドを入力した場合，ヒストリに入れない
+# setopt hist_ignore_dups
+# # コマンドの不要な空白を削除してヒストリに登録
+# setopt hist_reduce_blanks
+# # historyコマンドをヒストリに登録しない
+# setopt hist_no_store
+# # スペースで始まるコマンドをヒストリに登録しない
+# setopt hist_ignore_space
+# # コマンドの開始時間，経過時間をヒストリに保存
+# setopt extended_history  
+# # リダイレクション (>) で上書きしない
+# # >! で強制書き込み
+# # setopt no_clobber
+
+# # 「#」 「~」 「^」を特殊文字として使用する
+# setopt extended_glob
+# # 補完候補をスッキリ表示
+# setopt list_packed
+
+# # 変数をディレクトリパスとして利用する
+# setopt auto_name_dirs
+# # cd コマンドで自動的にpushdする
+# setopt auto_pushd
+# # pushdの重複を防ぐ
+# setopt pushd_ignore_dups 
+# # popdでスタックの内容を表示しない
+# setopt pushd_silent
+# # 日本語のファイル名も補完リストで表示
+# setopt print_eight_bit
+# # rm で * を使う際に聞き返してこない
+# setopt rm_star_silent
+# # ファイル名中の数字を数字としてソート
+# setopt numeric_glob_sort
+# ## TAB で順に補完候補を切り替える
+# ## setopt auto_menu 
+# ## TAB で順に補完候補を切り替えない
+# setopt noautomenu
+# setopt sh_word_split
+# setopt no_list_ambiguous 

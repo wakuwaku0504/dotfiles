@@ -8,10 +8,6 @@
 #. /etc/X11/Xsession
 #タッチパッド
 syndaemon -i 0.5 -k &
-#urxvt fcitx
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
 fcitx
 xrdb ~/.Xresources
 #default WM is i3
