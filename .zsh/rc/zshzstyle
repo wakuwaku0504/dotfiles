@@ -2,10 +2,25 @@
 autoload -Uz compinit; compinit
 #補完でカラーを使用する
 autoload -Uz colors; colors
-zstyle ':completion:*' list-colors "${LS_COLORS}"
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 # 補完後、メニュー選択モードになり左右キーで移動が出来る
 zstyle ':completion:*:default' menu select=2
 #大文字、小文字を区別せず補完する
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 #apd-get,dpkgでキャッシュを使う
 zstyle ':completion:*' use-cache true
+
+# セパレータを設定する
+# zstyle ':completion:*' list-separator '-->'
+# zstyle ':completion:*:manuals' separate-sections true
+
+# zstyle ':completion:*' verbose yes
+# zstyle ':completion:*' completer _expand _complete _match _prefix _approximate _list _history
+# zstyle ':completion:*:messages' format $YELLOW'%d'$DEFAULT
+# zstyle ':completion:*:warnings' format $RED'No matches for:'$YELLOW' %d'$DEFAULT
+# zstyle ':completion:*:descriptions' format $YELLOW'completing %B%d%b'$DEFAULT
+# zstyle ':completion:*:corrections' format $YELLOW'%B%d '$RED'(errors: %e)%b'$DEFAULT
+# zstyle ':completion:*:options' description 'yes'
+# # グループ名に空文字列を指定すると，マッチ対象のタグ名がグループ名に使われる。
+# # したがって，すべての マッチ種別を別々に表示させたいなら以下のようにする
+# zstyle ':completion:*' group-name ''
