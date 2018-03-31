@@ -28,6 +28,8 @@ setopt list_packed
 setopt no_beep 
 # 親プロセスが死んでも子プロセスが死なない
 setopt nohup 
+# ファイル名中の数字を数字としてソート
+setopt numeric_glob_sort 
 # 日本語のファイル名も補完リストで表示
 setopt print_eight_bit  
 # 複数のタームで実行したコマンドのヒストリを共有化する
@@ -64,8 +66,7 @@ setopt share_history
 
 # # rm で * を使う際に聞き返してこない
 # setopt rm_star_silent
-# # ファイル名中の数字を数字としてソート
-# setopt numeric_glob_sort
+
 # ## TAB で順に補完候補を切り替える
 # ## setopt auto_menu 
 # ## TAB で順に補完候補を切り替えない

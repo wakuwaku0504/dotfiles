@@ -3,14 +3,20 @@
 #プロンプトの設定
 #ノーマルモードのプロンプト
 #.zsh/rc/zshfuncsの関数で利用
-PROMPT_NORMAL='(%F{yellow}%d%f)%F{green}:%f[%F{red}NOR%f]%F{white}
-$%f ' 
+L_RP='%F{white}(%f'
+R_RP='%F{white})%f' 
+L_SP='%F{white}[%f'  
+R_SP='%F{white}]%f'  
+DOLLER='%F{white}$%f'
+COLON='%F{white}$%f'
+PROMPT_NORMAL="${L_RP}%F{yellow}%d%f${R_RP}${COLON}${L_SP}%F{red}NOR%f${R_SP}
+${DOLLER} " 
 #挿入モードのプロンプト
-PROMPT_INSERT='(%F{yellow}%d%f)%F{green}:%f[%F{blue}INS%f]%F{white}
-$%f ' 
+PROMPT_INSERT="${L_RP}%F{yellow}%d%f${R_RP}${COLON}${L_SP}%F{blue}INS%f${R_SP}
+${DOLLER} " 
 #ビジュアルモードのプロンプト
-PROMPT_VISUAL='(%F{yellow}%d%f)%F{green}:%f[%F{green}VIS%f]%F{white}
-$%f '  
+PROMPT_VISUAL="${L_RP}%F{yellow}%d%f${R_RP}${COLON}${L_SP}%F{green}VIS%f${R_SP}
+${DOLLER} "                                                             
 
 #色の定義
 local DEFAULT=$'%{^[[m%}'$

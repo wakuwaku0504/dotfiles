@@ -18,7 +18,7 @@ syntax on
 " leader
 let mapleader = ','
 "カーソルが空白でも動ける
-set virtualedit=all
+" set virtualedit=all
 "すでにバッファを開いていたらそこに飛ぶ
 set switchbuf=useopen
 " タブが対応する空白の数
