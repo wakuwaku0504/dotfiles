@@ -5,11 +5,8 @@ function loadlib() {
         fi
 }
 
-
 #alias読み込み
 loadlib $ZDOTDIR/rc/zshalias
-#prompt読み込み
-loadlib $ZDOTDIR/rc/zshprompt
 #setopt読み込み
 loadlib $ZDOTDIR/rc/zshopt
 #関数読み込み
@@ -18,10 +15,10 @@ loadlib $ZDOTDIR/rc/zshfuncs
 loadlib $ZDOTDIR/rc/zshzstyle
 #変数の読み込み
 loadlib $ZDOTDIR/rc/zshvar
-#plugin読み込み
-loadlib $ZDOTDIR/rc/zshplugin
 #bindkeyの読み込み
 loadlib $ZDOTDIR/rc/zshbindkey
 #その他の設定
 loadlib $ZDOTDIR/rc/zshmisc
+#zplug
+loadlib $ZDOTDIR/rc/zshzplug
 

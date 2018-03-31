@@ -12,18 +12,28 @@ setopt correct
 setopt correct_all
 # 語の途中でも補完
 setopt complete_in_word
+# 重複するコマンドが記憶されるとき、古い方を削除する。
+setopt hist_ignore_all_dups
+# 直前と同じコマンドを入力した場合，ヒストリに入れない
+setopt hist_ignore_dups  
+# 重複するコマンドが保存されるとき、古い方を削除する。
+setopt hist_save_no_dups
 # C-dでログアウトしない
 setopt IGNOREEOF
+# 補完候補をスッキリ表示
+setopt list_packed 
 # エラーの際のビープ音を鳴らさない
 setopt no_beep 
+# 日本語のファイル名も補完リストで表示
+setopt print_eight_bit  
+# 複数のタームで実行したコマンドのヒストリを共有化する
+setopt share_history 
+
 
 # # 親プロセスが死んでも子プロセスが死なない
 # setopt nohup
 
-# # 複数のタームで実行したコマンドのヒストリを共有化する
-# setopt share_history
-# # 直前と同じコマンドを入力した場合，ヒストリに入れない
-# setopt hist_ignore_dups
+
 # # コマンドの不要な空白を削除してヒストリに登録
 # setopt hist_reduce_blanks
 # # historyコマンドをヒストリに登録しない
@@ -38,8 +48,7 @@ setopt no_beep
 
 # # 「#」 「~」 「^」を特殊文字として使用する
 # setopt extended_glob
-# # 補完候補をスッキリ表示
-# setopt list_packed
+
 
 # # 変数をディレクトリパスとして利用する
 # setopt auto_name_dirs
@@ -49,8 +58,7 @@ setopt no_beep
 # setopt pushd_ignore_dups 
 # # popdでスタックの内容を表示しない
 # setopt pushd_silent
-# # 日本語のファイル名も補完リストで表示
-# setopt print_eight_bit
+
 # # rm で * を使う際に聞き返してこない
 # setopt rm_star_silent
 # # ファイル名中の数字を数字としてソート

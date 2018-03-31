@@ -9,6 +9,15 @@ function ranger-cd {
     rm -f -- "$tempfile"
 }
 
+#rangerのネストを防ぐ
+function ranger() {
+    if [ -z "$RANGER_LEVEL" ]; then
+        /usr/bin/ranger $@
+    else
+        exit
+    fi
+}
+
 #zshにおけるプロンプト
 function zle-line-init zle-keymap-select {
     case $KEYMAP in
