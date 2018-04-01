@@ -2,9 +2,5 @@
 alias ls='ls --color=auto'
 alias la='ls -la'
 alias i3lock='i3lock -i ~/.wallpaper/i3lock.png'
-alias ra='ranger-cd'
 alias ssh='ssh -XC'
-alias exdis='xrandr --output HDMI-2 --auto'
-alias rdis='xrandr --output HDMI-2 --auto --right-of eDP-1'
-alias offdis='xrandr --output HDMI-2 --off'
-alias vi='nvim'
+

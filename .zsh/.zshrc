@@ -1,10 +1,3 @@
-function loadlib() {
-        lib=${1:?"You have to specify a library file"}
-        if [ -f "$lib" ];then #ファイルの存在を確認
-                . "$lib"
-        fi
-}
-
 #alias読み込み
 loadlib $ZDOTDIR/rc/zshalias
 #setopt読み込み
@@ -22,3 +15,8 @@ loadlib $ZDOTDIR/rc/zshmisc
 #zplug
 loadlib $ZDOTDIR/rc/zshzplug
 
+#local設定を読み込み
+case $HOST in
+    nagura-ThinkPad-T470s) loadlib $ZDOTDIR/rc.local/ThinkPad/.zshrc;;
+                        *) loadlib $ZDOTDIR/rc.local/lab/.zshrc;;
+esac

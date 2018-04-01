@@ -1,0 +1,56 @@
+#mv ~/vivado* ~/tmp
+export TERM=xterm-256color
+export PATH=$HOME/local/bin:$PATH
+case $HOST in
+     cooper )
+     export SNPSLMD_LICENSE_FILE=1700@vdec-cad1:1700@vdec-cad2:1700@vdec-cad3
+     export SYNOPSYS_DIR=/opt/synopsys
+     export PATH=$PATH:/opt/synopsys/hspice/hspice/bin
+     ;;
+     #hawaiiならenv_hawaiiに入
+     hawaii )
+     export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+     export PATH=$PATH
+     export CFLAGS=-I$CUDA_HOME/include
+     export LDFLAGS=-L$CUDA_HOME/lib
+
+    #なんかシンタックスハイライト効かないから
+     alias vi='\vi'
+    #matlab
+    #lts errorを防ぐためpreload
+     export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libgomp.so.1
+     export matlabroot=/ldisk/nagura/local/MATLAB/R2017b
+    #自分のpython
+     export PATH=$HOME/local/bin:$PATH
+     export LD_LIBRARY_PATH=$HOME/local/lib:$LD_LIBRARY_PATH
+     source $HOME/env_hawaii/bin/activate
+     export CUDA_HOME=/usr/local/cuda-8.0
+     export PATH=$CUDA_HOME/bin:$PATH
+     export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+     export LD_LIBRARY_PATH=$CUDA_HOME/lib:$LD_LIBRARY_PATH
+     export CUDA_ROOT=$CUDA_HOME/bin
+     export CPATH=$CUDA_HOME/include:$CPATH
+
+     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$matlabroot/bin/glnxa64:$matlabroot/sys/os/glnxa6$$4
+     ##caffe
+     #export CAFFE_HOME=/usr/local/stow/caffe
+     #export PATH=$CAFFE_HOME/bin:$PATH
+     #export LD_LIBRARY_PATH=$CAFFE_HOME/lib:$LD_LIBRARY_PATH
+     #export PYTHONPATH=$CAFFE_HOME/python:$PYTHONPATH
+     ;;
+     molokai )
+     export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+     export PATH=$PATH
+     export CFLAGS=-I$CUDA_HOME/include
+     export LDFLAGS=-L$CUDA_HOME/lib
+
+     source /home/nagura/env_molokai/bin/activate
+     export CUDA_HOME=/usr/local/cuda-8.0
+     export PATH=$CUDA_HOME/bin:$PATH
+     export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+     export LD_LIBRARY_PATH=$CUDA_HOME/lib:$LD_LIBRARY_PATH
+     export CUDA_ROOT=$CUDA_HOME/bin
+     export CPATH=$CUDA_HOME/include:$CPATH
+     ;;
+esac
+
