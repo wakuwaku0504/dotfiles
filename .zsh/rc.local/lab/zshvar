@@ -1,8 +1,11 @@
-#mv ~/vivado* ~/tmp
+#研究室での変数設定
+RPROMPT='[%m]'
+
+
 export TERM=xterm-256color
 export PATH=$HOME/local/bin:$PATH
 case $HOST in
-     cooper )
+     niihau )
      export SNPSLMD_LICENSE_FILE=1700@vdec-cad1:1700@vdec-cad2:1700@vdec-cad3
      export SYNOPSYS_DIR=/opt/synopsys
      export PATH=$PATH:/opt/synopsys/hspice/hspice/bin
@@ -10,7 +13,6 @@ case $HOST in
      #hawaiiならenv_hawaiiに入
      hawaii )
      export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
-     export PATH=$PATH
      export CFLAGS=-I$CUDA_HOME/include
      export LDFLAGS=-L$CUDA_HOME/lib
 
