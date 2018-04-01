@@ -1,5 +1,7 @@
+#ThinkPadのエイリアス
 alias ra='ranger-cd'
 alias exdis='xrandr --output HDMI-2 --auto'
 alias rdis='xrandr --output HDMI-2 --auto --right-of eDP-1'
 alias offdis='xrandr --output HDMI-2 --off'
 alias vi='nvim'
+alias spotify='snap run spotify'

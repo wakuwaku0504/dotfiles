@@ -1,3 +1,7 @@
+#neovim内でターミナルを起動すると.zshenvが読み込まれないようなので
+if [ -n $ZSHENV_FLAG ]; then
+    . $HOME/.zshenv
+fi
 #alias読み込み
 loadlib $ZDOTDIR/rc/zshalias
 #setopt読み込み
