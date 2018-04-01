@@ -5,7 +5,6 @@ function loadlib() {
                 . "$lib"
         fi
 }
-
 export ZDOTDIR=$HOME/.zsh
 # print 'here zshenv'
 case $HOST in
@@ -13,3 +12,5 @@ case $HOST in
                         *) loadlib $ZDOTDIR/rc.local/lab/.zshenv;;
 esac
 
+#zshenvが読み込まれたことを意味する
+ZSHENV_FLAG=1

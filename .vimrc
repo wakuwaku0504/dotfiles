@@ -93,7 +93,7 @@ nnoremap <silent> O :<C-u>call append(expand('.'), '')<Cr>j
 nnoremap <silent> <Space>l :bn<CR>
 nnoremap <silent> <Space>h :bp<CR>
 "terminal mode
-tnoremap <silent> <C-j><C-j> <C-\><C-n>
+tnoremap <silent> <C-t> <C-\><C-n>
 "プラグイン
 "dein Scripts-----------------------------
 if &compatible
