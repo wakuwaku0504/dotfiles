@@ -192,7 +192,7 @@ exec --no-startup-id volumeicon
 ##�ʒm
 exec --no-startup-id dunst
 ##copyq
-exec copyq
+exec --no-startup-id copyq
 ##dropbox
 exec --no-startup-id dropbox start 
 ##xbindkeys
@@ -207,8 +207,8 @@ exec --no-startup-id xset -b
 #exec --no-startup-id setxkbmap -option ctrl:nocaps 
 #exec ~/.i3/scripts/wallpaper.sh 
 exec --no-startup-id feh  --image-bg black --bg-max '/home/nagura/.wallpaper/wallpaper' 
-exec --no-startup-id ~/.i3/scripts/.conky_run.sh
-exec  ~/.i3/scripts/battery_report
+exec --no-startup-id ~/.i3/scripts/conky_run.sh
+exec --no-startup-id ~/.i3/scripts/battery_report
 # exec --no-startup-id urxvtd -o -f
 #exec --no-startup-id battery-monitor
 #####i3-gaps####
