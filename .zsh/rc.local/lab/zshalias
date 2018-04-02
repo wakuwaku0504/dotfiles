@@ -24,3 +24,5 @@ alias vi='vim'
 
 alias w-time="ssh karafuto /var/www/timecard/w-time.rb"
 alias matlab='LC_ALL=C matlab'
+
+alias i3lock='i3lock -t -i ~/.wallpaper/i3lock.png'

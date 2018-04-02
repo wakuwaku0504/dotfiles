@@ -1,6 +1,5 @@
-#zsh‚É‚¨‚¯‚éŠÂ‹«•Ï”
+#zsh‚É‚¨‚¯‚éalias
 alias ls='ls --color=auto'
 alias la='ls -la'
-alias i3lock='i3lock -i ~/.wallpaper/i3lock.png'
 alias ssh='ssh -XC'
 
