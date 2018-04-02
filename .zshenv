@@ -6,7 +6,7 @@ function loadlib() {
         fi
 }
 export ZDOTDIR=$HOME/.zsh
-
+# print 'here zshenv'
 case $HOST in
     nagura-ThinkPad-T470s) loadlib $ZDOTDIR/rc.local/ThinkPad/.zshenv;;
                         *) loadlib $ZDOTDIR/rc.local/lab/.zshenv;;
