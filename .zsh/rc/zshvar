@@ -8,7 +8,7 @@ R_RP='%F{white})%f'
 L_SP='%F{white}[%f'  
 R_SP='%F{white}]%f'  
 DOLLER='%F{white}$%f'
-COLON='%F{white}$%f'
+COLON='%F{white}:%f'
 PROMPT_NORMAL="${L_RP}%F{yellow}%d%f${R_RP}${COLON}${L_SP}%F{red}NOR%f${R_SP}
 ${DOLLER} " 
 #挿入モードのプロンプト
