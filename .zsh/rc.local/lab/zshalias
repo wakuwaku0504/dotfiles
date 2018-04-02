@@ -2,7 +2,7 @@
 alias h='history -r 20'
 
 alias l='ls -a'
-alias ls='ls -F'
+alias ls='ls --color -F'
 alias la='ls -la -h'
 
 #### colored ls (使うときは以下の comment out をはずす)
