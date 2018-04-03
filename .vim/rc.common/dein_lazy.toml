@@ -26,6 +26,9 @@ on_ft = 'python'
 repo = 'Vimjas/vim-python-pep8-indent'
 on_ft = 'python'
 
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
 
 [[plugins]]
 repo = 'sudar/vim-arduino-syntax'
