@@ -3,21 +3,21 @@ if [ -n $ZSHENV_FLAG ]; then
     . $HOME/.zshenv
 fi
 #alias読み込み
-loadlib $ZDOTDIR/rc/zshalias
+loadlib $ZDOTDIR/rc.common/zshalias
 #setopt読み込み
-loadlib $ZDOTDIR/rc/zshopt
+loadlib $ZDOTDIR/rc.common/zshopt
 #関数読み込み
-loadlib $ZDOTDIR/rc/zshfuncs
+loadlib $ZDOTDIR/rc.common/zshfuncs
 #zstyle読み込み
-loadlib $ZDOTDIR/rc/zshzstyle
+loadlib $ZDOTDIR/rc.common/zshzstyle
 #変数の読み込み
-loadlib $ZDOTDIR/rc/zshvar
+loadlib $ZDOTDIR/rc.common/zshvar
 #bindkeyの読み込み
-loadlib $ZDOTDIR/rc/zshbindkey
+loadlib $ZDOTDIR/rc.common/zshbindkey
 #その他の設定
-loadlib $ZDOTDIR/rc/zshmisc
+loadlib $ZDOTDIR/rc.common/zshmisc
 #zplug
-loadlib $ZDOTDIR/rc/zshzplug
+loadlib $ZDOTDIR/rc.common/zshzplug
 
 #local設定を読み込み
 case $HOST in
