@@ -61,4 +61,4 @@ set noswapfile
 "カーソルが空白でも動ける
 " set virtualedit=all
 set background=dark
-
+set t_Co=256
